@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_main"
+    app:startDestination="@id/parkingOverviewFragment">
+
+    <fragment
+        android:id="@+id/parkingOverviewFragment"
+        android:name="com.example.eindwerkmobile.ui.TrashCollectorOverviewFragment"
+        android:label="ParkingOverviewFragment" >
+        <action
+            android:id="@+id/action_parkingOverviewFragment_to_parkingDetailFragment"
+            app:destination="@id/parkingDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parkingDetailFragment"
+        android:name="com.example.eindwerkmobile.ui.TrashCollectorDetailFragment"
+        android:label="ParkingDetailFragment" >
+        <argument
+            android:name="parking"
+            app:argType="com.example.eindwerkmobile.models.Parking" />
+    </fragment>
+</navigation>

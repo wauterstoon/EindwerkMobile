@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <variable
+        name="parking"
+        type="com.example.eindwerkmobile.models.TrashCollector" />
+</data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/tv_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{parking.fields.name}"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Naam parking" />
+
+    <TextView
+        android:id="@+id/tv_detail_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{parking.fields.address}"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_detail_name"
+        tools:text="straat 23, 9000 Gent" />
+
+    <TextView
+        android:id="@+id/tv_detail_contactinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{parking.fields.contactinfo}"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_detail_address"
+        tools:text="Tel: 0994180254" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
